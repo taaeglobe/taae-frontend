@@ -1,0 +1,26 @@
+.about-section {
+  background: #e5e7eb;
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #374151;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

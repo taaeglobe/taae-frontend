@@ -1,0 +1,64 @@
+.detail-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 10px auto;
+  background: #fff;
+}
+
+.detail-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.detail-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.detail-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #222;
+  text-align: center;
+}
+
+.detail-section {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.detail-section h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.detail-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-height: 3.5em; /* about 3 lines */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.detail-description.expanded {
+  max-height: 1000px;
+}
+
+.toggle-button {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #1e90ff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95rem;
+}

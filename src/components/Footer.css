@@ -1,0 +1,82 @@
+.footer {
+  background: #1f2937; /* dark gray */
+  color: white;
+  padding: 3rem 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 250px;
+}
+
+.footer-about h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-about p {
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #facc15;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #facc15; /* amber-400 */
+}
+
+.footer-contact p {
+  margin: 0.5rem 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 0.75rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #facc15;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #374151;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}

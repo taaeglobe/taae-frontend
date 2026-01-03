@@ -1,0 +1,94 @@
+.admin-faq-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9fafe;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.admin-faq-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.faq-form input,
+.faq-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.faq-form button {
+  padding: 10px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-form button:hover {
+  background: #0056b3;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-card {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s;
+}
+
+.faq-card:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.faq-answer {
+  color: #555;
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.faq-actions button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.faq-actions button:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.faq-actions button:last-child {
+  background: #dc3545;
+  color: white;
+}

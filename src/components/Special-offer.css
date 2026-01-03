@@ -1,0 +1,148 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.offers {
+  background: #eff6ff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.offers__heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1e40af;
+  font-weight: 700;
+}
+
+.offers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offers__link {
+  text-decoration: none;
+}
+
+.offers__card {
+  position: relative;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.offers__card:hover {
+  transform: scale(1.08) rotateX(6deg) rotateY(8deg);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.4),
+    0 20px 40px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  color: white;
+}
+
+.offers__card:hover h3,
+.offers__card:hover p {
+  color: white;
+}
+
+.offers__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.3),
+    rgba(96, 165, 250, 0.3)
+  );
+  opacity: 0;
+  border-radius: 1rem;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.offers__card:hover::before {
+  opacity: 1;
+}
+
+.offers__card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.offers__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ef4444;
+  color: white;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 8px rgb(239 68 68 / 0.4);
+  user-select: none;
+  z-index: 10;
+}
+
+.offers__image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.offers__card:hover .offers__image {
+  transform: scale(1.1) rotate(2deg);
+  border-radius: 1rem;
+}
+
+.offers__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #1e3a8a;
+}
+
+.offers__slogan {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.offers__loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin: 2rem 0;
+}
+
+@media (max-width: 600px) {
+  .offers__heading {
+    font-size: 2rem;
+  }
+
+  .offers__title {
+    font-size: 1.25rem;
+  }
+
+  .offers__slogan {
+    font-size: 0.9rem;
+  }
+}

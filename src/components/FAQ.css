@@ -1,0 +1,92 @@
+/* Modern CSS for FAQ section */
+
+body {
+  background: linear-gradient(135deg, #f9fbfc, #e5f0f8);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e1e2f;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background-color: #f7faff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+}
+
+.faq-question {
+  background-color: transparent;
+  padding: 18px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 24px 18px;
+  font-size: 18px;
+  color: #4a5568;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.faq-answer.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .faq-title {
+    font-size: 26px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 16px;
+    font-size: 15px;
+  }
+}
