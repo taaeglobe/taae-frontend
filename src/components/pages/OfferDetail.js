@@ -60,7 +60,7 @@ const OfferDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/offers/${id}`).then((res) => {
+    axios.get(`https://taae-backend.onrender.com/api/offers/${id}`).then((res) => {
       setOffer(res.data);
       setLoading(false);
     });
@@ -74,7 +74,7 @@ const OfferDetail = () => {
       <div className="offer-detail-container">
         <div className="offer-detail-image-wrapper">
           <img
-            src={`http://localhost:5000/uploads/${offer.image}`}
+            src={`https://taae-backend.onrender.com/uploads/${offer.image}`}
             alt={offer.place_name}
             className="offer-detail-image"
           />

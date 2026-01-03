@@ -10,7 +10,7 @@ const SpecialOffersSection = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/offers")
+      .get("https://taae-backend.onrender.com/api/offers")
       .then((response) => {
         const shuffled = [...response.data].sort(() => Math.random() - 0.5);
         setOffers(shuffled.slice(0, 4));
@@ -60,7 +60,7 @@ const SpecialOffersSection = () => {
             >
               <span className="offers__badge">Special</span>
               <img
-                src={`http://localhost:5000/uploads/${image}`}
+                src={`https://taae-backend.onrender.com/uploads/${image}`}
                 alt={place_name}
                 className="offers__image"
               />

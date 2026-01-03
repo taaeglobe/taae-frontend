@@ -14,7 +14,7 @@ const Login = ({ setUser }) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://taae-backend.onrender.com/api/auth/login",
         credentials
       );
       const user = res.data.user;

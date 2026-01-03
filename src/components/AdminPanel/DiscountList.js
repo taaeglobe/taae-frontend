@@ -6,13 +6,13 @@ const DiscountList = () => {
   const [discounts, setDiscounts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/discounts").then((res) => {
+    axios.get("https://taae-backend.onrender.com/api/discounts").then((res) => {
       setDiscounts(res.data);
     });
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/discounts/${id}`);
+    await axios.delete(`https://taae-backend.onrender.com/api/discounts/${id}`);
     setDiscounts(discounts.filter((item) => item._id !== id));
   };
 

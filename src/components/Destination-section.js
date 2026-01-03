@@ -14,7 +14,7 @@ const DestinationsSection = ({
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/popular-destinations")
+      .get("https://taae-backend.onrender.com/api/popular-destinations")
       .then((response) => {
         let data = response.data;
 
@@ -65,7 +65,7 @@ const DestinationsSection = ({
               transition={{ duration: 0.6, delay: i * 0.3 }}
             >
               <img
-                src={`http://localhost:5000/uploads/${image}`}
+                src={`https://taae-backend.onrender.com/uploads/${image}`}
                 alt={place_name}
                 className="destination-image"
               />

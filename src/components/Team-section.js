@@ -6,7 +6,7 @@ const TeamSection = () => {
   const [team, setTeam] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/team")
+    fetch("https://taae-backend.onrender.com/api/team")
       .then((res) => res.json())
       .then((data) => setTeam(data));
   }, []);
@@ -29,7 +29,7 @@ const TeamSection = () => {
             }}
           >
             <img
-              src={`http://localhost:5000/uploads/${image}`}
+              src={`https://taae-backend.onrender.com/uploads/${image}`}
               alt={name}
               className="avatar-img"
             />

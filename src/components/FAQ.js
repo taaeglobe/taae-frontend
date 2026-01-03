@@ -12,7 +12,7 @@ const FAQ = () => {
 
   const fetchFAQs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/faqs");
+      const res = await axios.get("https://taae-backend.onrender.com/api/faqs");
       const sortedFaqs = res.data.sort((a, b) => a.id - b.id);
       setFaqs(sortedFaqs);
     } catch (error) {

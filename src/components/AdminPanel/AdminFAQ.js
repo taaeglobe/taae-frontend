@@ -11,7 +11,7 @@ const AdminFAQ = () => {
   }, []);
   const fetchFAQs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/faqs");
+      const res = await axios.get("https://taae-backend.onrender.com/api/faqs");
       setFaqs(res.data);
     } catch (error) {
       console.error("Error fetching FAQs:", error);
@@ -26,9 +26,9 @@ const AdminFAQ = () => {
         answer: form.answer,
       };
       if (form.id) {
-        await axios.put(`http://localhost:5000/api/faqs/${form.id}`, data);
+        await axios.put(`https://taae-backend.onrender.com/api/faqs/${form.id}`, data);
       } else {
-        await axios.post("http://localhost:5000/api/faqs", data);
+        await axios.post("https://taae-backend.onrender.com/api/faqs", data);
       }
 
       setForm({ id: null, question: "", answer: "" });
@@ -45,7 +45,7 @@ const AdminFAQ = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this FAQ?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/faqs/${id}`);
+        await axios.delete(`https://taae-backend.onrender.com/api/faqs/${id}`);
         fetchFAQs();
       } catch (error) {
         console.error("Error deleting FAQ:", error);

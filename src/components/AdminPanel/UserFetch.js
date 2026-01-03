@@ -18,7 +18,7 @@ const AdminUsers = () => {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const res = await api.get("http://localhost:5000/api/users");
+      const res = await api.get("https://taae-backend.onrender.com/api/users");
       // Filter users here to only those with role === 'user'
       const onlyUsers = res.data.filter((u) => u.role.toLowerCase() === "user");
       setUsers(onlyUsers);
@@ -31,7 +31,7 @@ const AdminUsers = () => {
 
   const toggleUserStatus = async (id, currentStatus) => {
     try {
-      await api.put(`http://localhost:5000/api/users/${id}/status`, {
+      await api.put(`https://taae-backend.onrender.com/api/users/${id}/status`, {
         active: !currentStatus,
       });
       setUsers((prev) =>

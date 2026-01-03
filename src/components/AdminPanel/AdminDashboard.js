@@ -52,7 +52,7 @@ const AdminDashboard = () => {
   const destDescRef = useRef(null);
 
   // Base URL for images
-  const imageBaseUrl = "http://localhost:5000/uploads/";
+  const imageBaseUrl = "https://taae-backend.onrender.com/uploads/";
 
   // Fetch all on mount
   useEffect(() => {
@@ -65,7 +65,7 @@ const AdminDashboard = () => {
   // Fetch Offers
   const fetchOffers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/offers");
+      const res = await axios.get("https://taae-backend.onrender.com/api/offers");
       setOffers(res.data);
     } catch (error) {
       console.error("Error fetching offers:", error);
@@ -76,7 +76,7 @@ const AdminDashboard = () => {
   const fetchDestinations = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/popular-destinations"
+        "https://taae-backend.onrender.com/api/popular-destinations"
       );
       setDestinations(res.data);
     } catch (error) {
@@ -87,7 +87,7 @@ const AdminDashboard = () => {
   // Fetch Team
   const fetchTeam = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/team");
+      const res = await axios.get("https://taae-backend.onrender.com/api/team");
       setTeam(res.data);
     } catch (error) {
       console.error("Error fetching team members:", error);
@@ -99,10 +99,10 @@ const AdminDashboard = () => {
     try {
       const url =
         type === "offers"
-          ? `http://localhost:5000/api/offers/${id}`
+          ? `https://taae-backend.onrender.com/api/offers/${id}`
           : type === "destinations"
-          ? `http://localhost:5000/api/popular-destinations/${id}`
-          : `http://localhost:5000/api/team/${id}`;
+          ? `https://taae-backend.onrender.com/api/popular-destinations/${id}`
+          : `https://taae-backend.onrender.com/api/team/${id}`;
       await axios.delete(url);
 
       if (type === "offers") fetchOffers();
@@ -174,12 +174,12 @@ const AdminDashboard = () => {
 
       if (offerForm.id) {
         await axios.put(
-          `http://localhost:5000/api/offers/${offerForm.id}`,
+          `https://taae-backend.onrender.com/api/offers/${offerForm.id}`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
       } else {
-        await axios.post("http://localhost:5000/api/offers", formData, {
+        await axios.post("https://taae-backend.onrender.com/api/offers", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       }
@@ -216,13 +216,13 @@ const AdminDashboard = () => {
 
       if (destinationForm.id) {
         await axios.put(
-          `http://localhost:5000/api/popular-destinations/${destinationForm.id}`,
+          `https://taae-backend.onrender.com/api/popular-destinations/${destinationForm.id}`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
       } else {
         await axios.post(
-          "http://localhost:5000/api/popular-destinations",
+          "https://taae-backend.onrender.com/api/popular-destinations",
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -258,12 +258,12 @@ const AdminDashboard = () => {
 
       if (teamForm.id) {
         await axios.put(
-          `http://localhost:5000/api/team/${teamForm.id}`,
+          `https://taae-backend.onrender.com/api/team/${teamForm.id}`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
       } else {
-        await axios.post("http://localhost:5000/api/team", formData, {
+        await axios.post("https://taae-backend.onrender.com/api/team", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       }

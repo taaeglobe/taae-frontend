@@ -10,7 +10,7 @@ const DestinationDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/popular-destinations/${id}`)
+      .get(`https://taae-backend.onrender.com/api/popular-destinations/${id}`)
       .then((res) => setDestination(res.data))
       .catch((err) => console.error("Error fetching detail:", err));
   }, [id]);
@@ -24,7 +24,7 @@ const DestinationDetail = () => {
       <div className="detail-container">
         <div className="detail-image-wrapper">
           <img
-            src={`http://localhost:5000/uploads/${image}`}
+            src={`https://taae-backend.onrender.com/uploads/${image}`}
             alt={place_name}
             className="detail-image"
           />

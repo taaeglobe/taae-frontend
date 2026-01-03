@@ -14,7 +14,7 @@ const ReviewForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/reviews/", {
+      await axios.post("https://taae-backend.onrender.com/api/reviews/", {
         username,
         description,
         stars,

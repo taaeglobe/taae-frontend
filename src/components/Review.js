@@ -9,7 +9,7 @@ const Review = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/reviews/").then((res) => {
+    axios.get("https://taae-backend.onrender.com/api/reviews/").then((res) => {
       // Get only the latest 3 reviews
       setReviews(res.data.slice(0, 3));
     });
