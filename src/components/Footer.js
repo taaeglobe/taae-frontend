@@ -32,17 +32,17 @@ const Footer = () => (
 
       <div className="footer-contact">
         <h4>Contact Us</h4>
-        <p>📞 +977-9807495755</p>
         <p>📞 +977-9856009459</p>
-        <p>✉️ info@traveladventure.com</p>
+        <p>📞 +977-9867209459</p>
+        <p>✉️ taaeglobe@gmail.com</p>
         <div className="social-icons">
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+          <a href="https://www.facebook.com/Taeglobes" target="_blank" rel="noreferrer">
             🌐 Facebook
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://instagram.com/Taeglobes" target="_blank" rel="noreferrer">
             📸 Instagram
           </a>
-          <a href="https://wa.me/9800000000" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/98056009459" target="_blank" rel="noreferrer">
             💬 WhatsApp
           </a>
         </div>

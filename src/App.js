@@ -24,6 +24,7 @@ import Destination from "./components/Section-pages/Destination";
 import ReviewForm from "./components/Section-pages/ReviewForm";
 import Login from "./components/Section-pages/Login";
 import RegisterForm from "./components/Section-pages/RegisterForm";
+import ProtectedRoute from "./components/pages/ProtectedRoutes";
 
 function HomePage() {
   return (
@@ -80,7 +81,14 @@ function App() {
         />
         {/* Admin login route */}
 
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+         <Route
+  path="/admin-dashboard"
+  element={
+    <ProtectedRoute user={user} roles={["admin"]}>
+      <AdminDashboard />
+    </ProtectedRoute>
+  }
+/>
       </Routes>
       <ChatbotFloatingButton />
       <Footer />
