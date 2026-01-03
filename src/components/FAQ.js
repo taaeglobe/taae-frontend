@@ -28,15 +28,15 @@ const FAQ = () => {
     <div className="faq-container" id="faq">
       <h2 className="faq-title">❓ Frequently Asked Questions</h2>
       {faqs.map((faq, index) => (
-        <div key={faq.id} className="faq-item">
+        <div key={faq.id} className="faq-item-frontend">
           <div
-            className={`faq-question ${activeIndex === index ? "active" : ""}`}
+            className={`faq-question-frontend ${activeIndex === index ? "active" : ""}`}
             onClick={() => toggleFAQ(index)}
           >
             {faq.question}
-            <span className="arrow">{activeIndex === index ? "▲" : "▼"}</span>
+            <span className="arrow-frontend">{activeIndex === index ? "▲" : "▼"}</span>
           </div>
-          <div className={`faq-answer ${activeIndex === index ? "show" : ""}`}>
+          <div className={`faq-answer-frontend ${activeIndex === index ? "show" : ""}`}>
             {faq.answer}
           </div>
         </div>

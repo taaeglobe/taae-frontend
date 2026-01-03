@@ -32,8 +32,8 @@ function HomePage() {
       <HeroSection />
       <SpecialOffersSection />
       <ServicesSection />
-      <AboutUsSection />
       <DestinationsSection />
+      <AboutUsSection />
       <TeamSection />
       <FAQ />
       <Review />
