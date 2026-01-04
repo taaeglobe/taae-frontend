@@ -20,32 +20,32 @@ const DestinationDetail = () => {
   const { place_name, description, image } = destination;
 
   return (
-    <>
-      <div className="detail-container">
-        <div className="detail-image-wrapper">
-          <img
-            src={`https://taae-backend.onrender.com/uploads/${image}`}
-            alt={place_name}
-            className="detail-image"
-          />
-        </div>
+    <div className="detail-container">
+      <div className="detail-image-wrapper">
+        <img
+          src={`https://taae-backend.onrender.com/uploads/${image}`}
+          alt={place_name}
+          className="detail-image"
+        />
+      </div>
 
-        <h1 className="detail-title">{place_name}</h1>
+      <h1 className="detail-title">{place_name}</h1>
 
-        <div className="detail-section">
-          <h2>About this destination</h2>
-          <p className={`detail-description ${expanded ? "expanded" : ""}`}>
-            {description}
-          </p>
+      <div className="detail-section">
+        <h2>About this destination</h2>
+        <p className={`detail-description ${expanded ? "expanded" : ""}`}>
+          {description}
+        </p>
+        {description.length > 200 && (
           <button
             className="toggle-button"
             onClick={() => setExpanded(!expanded)}
           >
             {expanded ? "Show Less ▲" : "Read More ▼"}
           </button>
-        </div>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
