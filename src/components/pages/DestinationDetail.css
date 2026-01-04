@@ -63,7 +63,7 @@
 
 /* Expanded description */
 .detail-description.expanded {
-  max-height: 2000px; /* large enough for long itineraries */
+  max-height: 5000px; /* large enough for long itineraries */
 }
 
 /* Read More / Show Less button */

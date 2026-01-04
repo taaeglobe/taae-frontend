@@ -107,7 +107,7 @@ const ContactUsSection = () => {
 
       <div className="contact-links">
         <a
-          href="https://wa.me/98056009459"
+          href="https://wa.me/9856009459"
           target="_blank"
           rel="noreferrer"
           className="whatsapp-link"

@@ -42,7 +42,7 @@ const Footer = () => (
           <a href="https://instagram.com/Taeglobes" target="_blank" rel="noreferrer">
             📸 Instagram
           </a>
-          <a href="https://wa.me/98056009459" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/9856009459" target="_blank" rel="noreferrer">
             💬 WhatsApp
           </a>
         </div>
