@@ -35,7 +35,9 @@ const Navbar = ({ user, setUser }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
+        <a href="/">
         <img src="../logo.png" alt="main-logo" />
+        </a>
       </div>
 
       <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
