@@ -18,7 +18,7 @@ const ChatbotFloatingButton = () => {
     <div className="chatbot-container">
       <div className={`chat-options ${isOpen ? "open" : ""}`}>
         <a
-          href="viber://chat?number=+9779856009459" // Replace with your WhatsApp number
+          href="https://wa.me/98056009459" 
           target="_blank"
           rel="noopener noreferrer"
           className="chat-icon whatsapp"
@@ -26,7 +26,7 @@ const ChatbotFloatingButton = () => {
           <FaWhatsapp />
         </a>
         <a
-          href="https://www.facebook.com/Taeglobes" // Replace with your Facebook page username
+          href="https://www.facebook.com/Taeglobes"
           target="_blank"
           rel="noopener noreferrer"
           className="chat-icon facebook"
@@ -34,7 +34,7 @@ const ChatbotFloatingButton = () => {
           <FaFacebookMessenger />
         </a>
         <a
-          href="viber://chat?number=+9779856009459" // Replace with your Viber number
+          href="viber://chat?number=+9779856009459"
           onClick={(e) => {
             setTimeout(() => {
               window.location.href = "https://www.viber.com/download/";

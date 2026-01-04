@@ -3,6 +3,7 @@ import axios from "axios";
 import "./AdminDashboard.css";
 import AdminFAQ from "./AdminFAQ";
 import AdminUsers from "./UserFetch";
+import AdminForms from "./AdminForm";
 
 const AdminDashboard = () => {
   const [activeSection, setActiveSection] = useState("offers");
@@ -364,6 +365,12 @@ const AdminDashboard = () => {
         >
           Manage User
         </button>
+         <button
+          className={activeSection === "form" ? "active" : ""}
+          onClick={() => setActiveSection("form")}
+        >
+          Manage Form
+        </button>
       </aside>
 
       <main className="main-content">
@@ -691,6 +698,7 @@ const AdminDashboard = () => {
         {/* FAQ SECTION */}
         {activeSection === "faq" && <AdminFAQ />}
         {activeSection === "user" && <AdminUsers />}
+        {activeSection === "form" && <AdminForms />}
       </main>
     </div>
   );
