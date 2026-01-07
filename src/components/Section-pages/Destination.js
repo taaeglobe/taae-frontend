@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import DestinationsSection from "../Destination-section";
-// import "./Destination.css";
+import "./Destination.css";
 
 function Destination() {
   const [searchTerm, setSearchTerm] = useState("");

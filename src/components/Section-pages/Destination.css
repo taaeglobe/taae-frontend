@@ -1,0 +1,37 @@
+/* Destination.css */
+
+/* Center the page title */
+.page-title {
+  text-align: center;       /* horizontally center */
+  font-size: 2.5rem;        /* bigger font */
+  font-weight: 700;         /* bold */
+  margin-top: 2rem;         /* space from top */
+  margin-bottom: 1.5rem;    /* space below title */
+  color: #333;              /* optional color */
+}
+
+/* Center the search container */
+.search-container {
+  display: flex;            /* enable flex layout */
+  justify-content: center;  /* horizontal center */
+  margin-bottom: 2rem;      /* space below search bar */
+}
+
+/* Style the search input */
+.search-input {
+  width: 100%;
+  max-width: 500px;         /* limit width */
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Optional: focus effect */
+.search-input:focus {
+  box-shadow: 0 0 0 3px #007bff44;
+  border-color: #007bff;
+}
