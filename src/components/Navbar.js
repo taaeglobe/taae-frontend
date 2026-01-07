@@ -37,9 +37,9 @@ const Navbar = ({ user, setUser }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">
+        <a href="/">
         <img src="../logo.png" alt="TAE Globe Travel Agency Logo" />
-        </Link>
+        </a>
       </div>
 
       <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
