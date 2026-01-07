@@ -48,7 +48,7 @@ const DestinationsSection = ({
 
   return (
     <section id="destinations" className="destinations-section">
-      <h2>Popular Destinations</h2>
+
       <div className="destinations-grid">
         {destinations.map(({ id, place_name, description, image }, i) => (
           <Link
