@@ -1,39 +1,34 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import DestinationsSection from "../Destination-section";
+// import "./Destination.css";
 
 function Destination() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
-      {/* Search Bar Container */}
-      <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
-      >
+      <Helmet>
+        <title>Popular Travel Destinations | Travel Adventure & Explore Globe</title>
+        <meta
+          name="description"
+          content="Discover popular travel destinations, tour packages, and holiday trips with Travel Adventure & Explore Globe."
+        />
+      </Helmet>
+
+      <h1 className="page-title">Popular Travel Destinations</h1>
+
+      <div className="search-container">
         <input
           type="text"
-          placeholder="🔍 Search your dream destination..."
+          className="search-input"
+          placeholder="Search your dream destination..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          style={{
-            padding: "12px 20px",
-            width: "100%",
-            maxWidth: "500px",
-            fontSize: "16px",
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            outline: "none",
-            boxShadow: "0 2px 5px rgba(0, 0, 0, 0.05)",
-            transition: "all 0.3s ease-in-out",
-          }}
-          onFocus={(e) => (e.target.style.boxShadow = "0 0 0 3px #007bff44")}
-          onBlur={(e) =>
-            (e.target.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.05)")
-          }
+          aria-label="Search destinations"
         />
       </div>
 
-      {/* Destination List */}
       <DestinationsSection
         limit={null}
         searchTerm={searchTerm}

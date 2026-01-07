@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 
 const Navbar = ({ user, setUser }) => {
@@ -35,19 +37,19 @@ const Navbar = ({ user, setUser }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="/">
-        <img src="../logo.png" alt="main-logo" />
-        </a>
+        <Link to="/">
+        <img src="../logo.png" alt="TAE Globe Travel Agency Logo" />
+        </Link>
       </div>
 
       <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/special-offers">Offers</a>
-        <a href="/destinations">Popular Destinations</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/special-offers">Offers</Link>
+        <Link to="/destinations">Popular Destinations</Link>
 
         {!user ? (
-          <a href="/login">Login</a>
+          <Link to="/login">Login</Link>
         ) : (
           <div className="user-dropdown" ref={dropdownRef}>
             <span className="user-greet" onClick={toggleDropdown}>
